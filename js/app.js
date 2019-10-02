@@ -19,7 +19,7 @@ const game ={
   start: function(){
     const tomagotchi = new Tomagotchi($('#inputBox').val());
     this.pet = tomagotchi;
-    // this.pet.name = $('#inputBox').val();
+
 
   //  console.log(tomagotchiName, 'before');
     // this.pet = tomagotchiName;
@@ -42,5 +42,8 @@ $('form').on('submit', (e) => {
   $('form').hide();
   $('inputBox').html();
   game.start();
-
+});
+$('#start').on('click', () => {
+  game.start();
+  $('#start').hide();
 });
