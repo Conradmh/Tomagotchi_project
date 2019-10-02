@@ -1,14 +1,15 @@
 class Tomagotchi {
-  constructor(name, hunger,sleepiness, boredom, age){
+  constructor(name){
     this.name = name;
-    this.hunger = hunger,//1-10,
-    this.sleepiness = sleepiness, //1-10
-    this.boredom = boredom, //1-10
-    this.age = age
+    this.hunger = 0,//1-10,
+    this.sleepiness = 0, //1-10
+    this.boredom = 0, //1-10
+    this.age = 0
   }
 
   changeName(){
     tomagotchi.name = prompt(`Please name your new little creature`);
+    return tomagotchi.name;
   }
 //   myMove: function() {
 //   var elem = document.getElementById("animate");
@@ -26,7 +27,7 @@ class Tomagotchi {
 // }
 
 };
-const tomagotchi = new Tomagotchi('rob'/*name*/);
+const tomagotchi = new Tomagotchi(/*name*/);
 const game ={
   time: 0,
   //timer belongs in game
@@ -48,5 +49,11 @@ const game ={
 
 $('#start').on('click', (e) => {
   tomagotchi.changeName();
-  console.log('name');
+  console.log(tomagotchi.name);
+});
+
+$('form' /*#submitBut*/).on('submit', (e) => {
+  console.log('clicked');
+  console.log( $('#inputBox').val());
+  e.preventDefault();
 });
