@@ -16,4 +16,8 @@ body {
   position: 50px;
   background-color: steelblue;
   font-size: 8em;
+  color: fuchsia;
+}
+.timer {
+  color: crimson;
 }
