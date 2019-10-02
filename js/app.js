@@ -53,7 +53,10 @@ $('#start').on('click', (e) => {
 });
 
 $('form' /*#submitBut*/).on('submit', (e) => {
-  console.log('clicked');
-  console.log( $('#inputBox').val());
+  tomagotchi.name = $('#inputBox').val();
+  console.log(tomagotchi.name);
+  //console.log('clicked');
+  //console.log( $('#inputBox').val());
   e.preventDefault();
+  $('form').hide();
 });
