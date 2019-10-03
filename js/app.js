@@ -10,7 +10,7 @@ class Tomagotchi {
 };
 
 const game ={
-  time: 60,
+  time: 30,
   pet: null,
   //timer belongs in game
   //only one timer in game, no multiple setIntervals
@@ -28,9 +28,10 @@ const game ={
           this.pet.age += 0.5;
           this.killTomagatchi(interval);
           this.lightsOn();
-          this.winState();
+          this.winState(interval);
           this.evolve();
-      }, 1200)
+          this.evolve2();
+      }, 1100)
 
   },
 
@@ -44,6 +45,8 @@ const game ={
   killTomagatchi(interval){
     if ((this.pet.hunger >= 10) || (this.pet.sleepiness >= 10) ||     (this.pet.boredom >= 10)) {
       $('#tImage').hide();
+      const $win = $('#winPhrase');
+      $win.text(`You Lose!`);
       clearInterval(interval);
     }
   },
@@ -58,10 +61,11 @@ const game ={
     //}
   },
   winState(interval){
-    const $win = $('#win');
+    const $win = $('#winPhrase');
     if (game.time === 0) {
+      $win.text(`You won!`);
       clearInterval(interval);
-      $win.html(`You won!`);
+
     }
   },
   lightsOn(interval){
@@ -82,20 +86,39 @@ const game ={
   },
   throwBone(){
     //  const $excite = $('#excite');
+    // game.tRexBounce();
     this.pet.boredom -= 3;
   },
   evolve(interval){
-    if(this.pet.age == 8){
+    if(this.pet.age % 8 == 0){
       $('#tImage').css('height', '85%');
       $('#tImage').css('width', '100%');
     }
   },
-  tRexBounce(){
-    // $('#tImage').block {
-    //   transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    // }
-    $('#tImage').animate({ "top" : "+=100px" }, 400, "easeOutBounce");
+  evolve2(interval){
+    if(this.pet.age % 16 == 0){
+      $('#tImage').css('height', '125%');
+      $('#tImage').css('width', '150%');
+    }
   },
+  // tRexBounce(){
+  //   // $('#tImage').animate({
+  //   //   transform: ['translateX(20px)', 'translateX(-20px)']},
+  //   //   {
+  //   //   duration: 400,
+  //   //   iterations: 5,
+  //   //   });
+  //
+  //     $('#tomagotchi').animate({
+  //         transform: ['translateX(150px)'],
+  //         duration: 3
+  //     });
+  //     $('#tomagotchi').animate({
+  //         transform: ['translateX(-150px)'],
+  //         duration: 3
+  //
+  //     });
+  // },
   updateStats(){
     const $hunger = $('#hunger');
     const $sleepiness = $('#sleepiness');
@@ -144,7 +167,7 @@ $('#feed').on('click', () => {
 });
 $('#excite').on('click', () => {
   game.throwBone();
-  game.tRexBounce();
+
 });
 // tomagotchiDeathInc: function(){
 //   this.hunger++;

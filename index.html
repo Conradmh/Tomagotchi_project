@@ -4,13 +4,11 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"> </script>
-    <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js">
-    </script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral&display=swap" rel="stylesheet">
     <title></title>
   </head>
   <body>
-      <!-- <div id="win"></div> -->
+
           <div class="statsDisplay">
             <div id="name">Name</div>
             <div id="hunger">Hunger: 1</div>
@@ -22,20 +20,28 @@
             <!-- <img src="https://cdn1.iconfinder.com/data/icons/time-and-date-i/24/Material_icons-03-31-512.png"> -->
             <span id="timer">60s</span>
           </div>
+          <div class="winContainer">
+            <div class="win">
+              <span id='winPhrase'></span>
+            </div>
+          </div>
           <div class="actionButtonsContainer">
             <button class="actionButtons" type="button" id="feed"></button>
             <button class="actionButtons" type="button" id="rest"></button>
             <button class="actionButtons" type="button" id="excite"></button>
           </div>
-          <form id="submitForm">
-            <input type="text" id="inputBox" placeholder="Enter your lil monster's name here">
-            <input type="submit" id="submitBut" value="Submit">
-          </form>
-
-    <div id="tomContainer">
-        <div id="tomagotchi"></div>
-          <img src="https://www.omgchrome.com/wp-content/uploads/2015/06/chrome-trex-dinosaur.jpg" id="tImage" alt="T rex">
-    </div>
+          <div class="submitFormBox">
+            <form id="submitForm">
+              <input type="text" id="inputBox" placeholder="Enter your lil monster's name here">
+              <input type="submit" id="submitBut" value="Submit">
+            </form>
+          </div>
+            <div class="tomContainerBox">
+              <div id="tomContainer">
+                <div id="tomagotchi"></div>
+                <img src="https://www.omgchrome.com/wp-content/uploads/2015/06/chrome-trex-dinosaur.jpg" id="tImage" alt="T rex">
+              </div>
+            </div>
     <script type="text/javascript" src="js/app.js">
     </script>
   </body>

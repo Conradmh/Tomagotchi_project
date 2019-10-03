@@ -29,15 +29,13 @@ body {
 #timer {
   display: flex;
   font-size: 5em;
-  color:
+  color: crimson;
 
 }
 .actionButtonsContainer{
   display: flex;
   width: auto;
   justify-content: center;
-  padding: 40px;
-  margin: 20px;
 }
 .actionButtons {
   background: url
@@ -59,11 +57,22 @@ body {
   background: url(https://cdn.imgbin.com/7/21/6/imgbin-labrador-retriever-puppy-bone-drawing-free-dog-bone-95PdXUzkefPVHkfdAtdhH4fgb.jpg);
   background-size: cover;
 }
+.tomContainerBox{
+  display: flex;
+  width: auto;
+  height: 250px;
+  align-items: flex-end;
+  justify-content: center;
+}
 #tomContainer {
   width: 150px;
-  height: 150px;
+  height: 190px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   position: relative;
-  background-color: forestgreen;
+  background-color: rgba(34,139,34,0);
+;
 }
 
 #animate {
@@ -79,14 +88,43 @@ body {
   width: 60%;
   /* background-color: cyan; */
 }
-.timer {
-  color: crimson;
+.winContainer {
+  display: flex;
+  width: auto;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.win{
+  display: flex;
+  justify-content: center;
+}
+
+
+#winPhrase {
+  display: flex;
+  color: black;
+  /* width: 125px;
+  height: 75px; */
+  font-size: 3em;
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+}
+}
+.submitFormBox {
+  display: flex;
+  height: 50px;
+  width: auto;
+  justify-content: center;
+  margin: 0;
 }
 #submitForm {
   height: 50px;
   width: auto;
   display: flex;
   justify-content: center;
+  margin: 0;
+
 
 }
 #submitBut{
