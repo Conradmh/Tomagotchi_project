@@ -4,14 +4,13 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"> </script>
+    <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js">
+    </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral&display=swap" rel="stylesheet">
     <title></title>
   </head>
   <body>
-      <div id="win"></div>
-        <form id="sumbitForm">
-          <input type="text" id="inputBox" placeholder="Enter your lil monster's name here">
-        <input type="submit" id="submitBut" value="Submit">
-        </form>
+      <!-- <div id="win"></div> -->
           <div class="statsDisplay">
             <div id="name">Name</div>
             <div id="hunger">Hunger: 1</div>
@@ -19,15 +18,23 @@
             <div id="boredom">Boredom: 1</div>
             <div id="age">Age: 0</div>
           </div>
-      <span id="timer">60s</span>
+          <div class="timerContainer" >
+            <!-- <img src="https://cdn1.iconfinder.com/data/icons/time-and-date-i/24/Material_icons-03-31-512.png"> -->
+            <span id="timer">60s</span>
+          </div>
+          <div class="actionButtonsContainer">
+            <button class="actionButtons" type="button" id="feed"></button>
+            <button class="actionButtons" type="button" id="rest"></button>
+            <button class="actionButtons" type="button" id="excite"></button>
+          </div>
+          <form id="submitForm">
+            <input type="text" id="inputBox" placeholder="Enter your lil monster's name here">
+            <input type="submit" id="submitBut" value="Submit">
+          </form>
 
-    <div class="actionButtonsContainer">
-      <button type="button" id="feed">Feed</button>
-      <button type="button" id="rest">Rest</button>
-      <button type="button" id="excite">Excite</button>
-    </div>
     <div id="tomContainer">
-        <div id="tomagotchi">T</div>
+        <div id="tomagotchi"></div>
+          <img src="https://www.omgchrome.com/wp-content/uploads/2015/06/chrome-trex-dinosaur.jpg" id="tImage" alt="T rex">
     </div>
     <script type="text/javascript" src="js/app.js">
     </script>

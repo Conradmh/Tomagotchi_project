@@ -29,6 +29,7 @@ const game ={
           this.killTomagatchi(interval);
           this.lightsOn();
           this.winState();
+          this.evolve();
       }, 1200)
 
   },
@@ -42,7 +43,7 @@ const game ={
 
   killTomagatchi(interval){
     if ((this.pet.hunger >= 10) || (this.pet.sleepiness >= 10) ||     (this.pet.boredom >= 10)) {
-      $('#tomagotchi').hide();
+      $('#tImage').hide();
       clearInterval(interval);
     }
   },
@@ -65,7 +66,9 @@ const game ={
   },
   lightsOn(interval){
     if (this.pet.sleepiness == 4) {
-      $('body').css('background-color', 'yellow')
+      $('body').css('background', 'url(http://www.jhgphoto.com/storage/thumbnails/3044724-19889236-thumbnail.jpg?__SQUARESPACE_CACHEVERSION=1345048726279)')
+      $('body').css('background-size', 'cover')
+      $('body').css('background-repeat', 'no-repeat')
     }
   },
   lightsOff(){
@@ -81,26 +84,34 @@ const game ={
     //  const $excite = $('#excite');
     this.pet.boredom -= 3;
   },
-  evolve(){
+  evolve(interval){
     if(this.pet.age == 8){
-
+      $('#tImage').css('height', '85%');
+      $('#tImage').css('width', '100%');
     }
+  },
+  tRexBounce(){
+    // $('#tImage').block {
+    //   transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    // }
+    $('#tImage').animate({ "top" : "+=100px" }, 400, "easeOutBounce");
   },
   updateStats(){
     const $hunger = $('#hunger');
     const $sleepiness = $('#sleepiness');
     const $boredom = $('#boredom');
     const $age = $('#age');
+    const $name = $('#name');
     // $this.pet.boredom++;
     // $this.pet.sleepiness++;
     // $this.pet.hunger = this.pet.hunger + 2;
 
-    $hunger.text(`${this.pet.name}s Hunger: ${this.pet.hunger}`)
-    $sleepiness.text(`${this.pet.name}s Sleepiness: ${this.pet.sleepiness}`)
-    $boredom.text(`${this.pet.name}s Boredom: ${this.pet.boredom}`)
-    $age.text(`${this.pet.name}s Age: ${this.pet.age}`)
-
-  }
+    $hunger.text(` Hunger: ${this.pet.hunger}`);
+    $sleepiness.text(` Sleepiness: ${this.pet.sleepiness}`);
+    $boredom.text(` Boredom: ${this.pet.boredom}`);
+    $age.text(` Age: ${this.pet.age}`);
+    $name.text(`${$('#inputBox').val()}`);
+ }
 }
 
 
@@ -121,7 +132,10 @@ $('form').on('submit', (e) => {
 $('#rest').on('click', () => {
   console.log('this rest button works')
   game.lightsOff();
- $('body').css('background-color', 'blue')
+ $('body').css('background', 'url(https://i.redd.it/puhiuz7r4msz.jpg)')
+ $('body').css('background-size', 'cover')
+ $('body').css('background-repeat', 'no-repeat')
+
 });
 
 $('#feed').on('click', () => {
@@ -130,7 +144,7 @@ $('#feed').on('click', () => {
 });
 $('#excite').on('click', () => {
   game.throwBone();
-
+  game.tRexBounce();
 });
 // tomagotchiDeathInc: function(){
 //   this.hunger++;

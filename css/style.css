@@ -1,8 +1,64 @@
 body {
-  background-color: yellow;
+  background: url(http://www.jhgphoto.com/storage/thumbnails/3044724-19889236-thumbnail.jpg?__SQUARESPACE_CACHEVERSION=1345048726279);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.statsDisplay {
+  width: auto;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(115, 141, 176, 0.85);
+  border-style: ridge;
+  border-color: black;
+  align-items: center;
+  font-family: 'Spectral', serif;
+  font-size: 2.5em;
+}
+.timerContainer {
+  display: flex;
+  background: url(https://cdn1.iconfinder.com/data/icons/time-and-date-i/24/Material_icons-03-31-512.png);
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: auto;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+}
+#timer {
+  display: flex;
+  font-size: 5em;
+  color:
 
 }
-
+.actionButtonsContainer{
+  display: flex;
+  width: auto;
+  justify-content: center;
+  padding: 40px;
+  margin: 20px;
+}
+.actionButtons {
+  background: url
+  display: flex;
+  width: auto;
+  padding: 40px;
+  margin: 20px;
+  border-radius: 75%;
+}
+#feed {
+  background: url(https://3.bp.blogspot.com/-HqUmG5UmfjQ/W_Yznq2xrHI/AAAAAAAAA4I/Y3a5Dzo0UwMkqo2rlsiJz9b-EVq3_3HZACHMYCw/s1600/pizza-png-images-free-download-pizza-png.jpg);
+  background-size: cover;
+}
+#rest {
+  background: url(https://www.pngfind.com/pngs/m/469-4693603_comic-effect-zzz-v-hd-png-download.png);
+  background-size: cover;
+}
+#excite {
+  background: url(https://cdn.imgbin.com/7/21/6/imgbin-labrador-retriever-puppy-bone-drawing-free-dog-bone-95PdXUzkefPVHkfdAtdhH4fgb.jpg);
+  background-size: cover;
+}
 #tomContainer {
   width: 150px;
   height: 150px;
@@ -13,11 +69,47 @@ body {
 #animate {
   width: 50px;
   height: 50px;
-  position: 50px;
+  position: relative;
   background-color: steelblue;
   font-size: 8em;
   color: fuchsia;
 }
+#tImage{
+  height: 50%;
+  width: 60%;
+  /* background-color: cyan; */
+}
 .timer {
   color: crimson;
 }
+#submitForm {
+  height: 50px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+
+}
+#submitBut{
+  background-color: lightslategrey;
+  color: white;
+}
+#inputBox {
+  background-color: steelblue;
+  width: 410px;
+}
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: pink;
+    font-size: 2em;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: pink;
+    font-size: 2em;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: pink;
+    font-size: 2em;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: pink;
+    font-size: 2em;
+  }
